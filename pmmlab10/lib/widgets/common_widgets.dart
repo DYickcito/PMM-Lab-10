@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/app_data.dart';
 import '../theme/app_theme.dart';
 
-// ═══════════════════════════════════════════════════════════════
-//  WIDGET 1 — MovieCard (Card horizontal para categorías)
-// ═══════════════════════════════════════════════════════════════
 class MovieCard extends StatelessWidget {
   final Movie movie;
   final VoidCallback? onTap;
@@ -91,9 +88,6 @@ class MovieCard extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  WIDGET 2 — TrendingCard (Card grande con número de rank)
-// ═══════════════════════════════════════════════════════════════
 class TrendingCard extends StatelessWidget {
   final Movie movie;
   final VoidCallback? onTap;
@@ -172,9 +166,7 @@ class TrendingCard extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  WIDGET 3 — FeatureCard (Card de motivos para unirse)
-// ═══════════════════════════════════════════════════════════════
+
 class FeatureCard extends StatelessWidget {
   final Map<String, dynamic> feature;
 
@@ -245,9 +237,6 @@ class FeatureCard extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  WIDGET 4 — FAQTile (ListTile expandible para preguntas)
-// ═══════════════════════════════════════════════════════════════
 class FAQTile extends StatefulWidget {
   final FaqItem faq;
 
@@ -338,9 +327,6 @@ class _FAQTileState extends State<FAQTile>
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  WIDGET 5 — SectionHeader (título de sección reutilizable)
-// ═══════════════════════════════════════════════════════════════
 class SectionHeader extends StatelessWidget {
   final String title;
   final VoidCallback? onSeeAll;
@@ -382,9 +368,7 @@ class SectionHeader extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  WIDGET 6 — EmailCTABar (barra email + botón CTA)
-// ═══════════════════════════════════════════════════════════════
+
 class EmailCTABar extends StatelessWidget {
   const EmailCTABar({super.key});
 
@@ -405,7 +389,6 @@ class EmailCTABar extends StatelessWidget {
           const SizedBox(height: 12),
           Row(
             children: [
-              // ── Campo email ─────────────────────────────
               Expanded(
                 child: TextField(
                   style: const TextStyle(

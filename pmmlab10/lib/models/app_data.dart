@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────
-//  MODELOS DE DATOS  (Listas y Mapas)
-// ─────────────────────────────────────────────
-
 class Movie {
   final String id;
   final String title;
@@ -55,12 +51,7 @@ class FaqItem {
   const FaqItem({required this.question, required this.answer});
 }
 
-// ─────────────────────────────────────────────
-//  DATOS ESTÁTICOS
-// ─────────────────────────────────────────────
-
 class AppData {
-  // ── Películas en Tendencia (con rank numérico) ──────────────
   static final List<Movie> trendingMovies = [
     Movie(
       id: 't1',
@@ -105,7 +96,6 @@ class AppData {
     ),
   ];
 
-  // ── Categorías con sus películas ────────────────────────────
   static final List<ContentCategory> categories = [
     ContentCategory(
       id: 'cat1',
@@ -234,7 +224,6 @@ class AppData {
     ),
   ];
 
-  // ── Razones para unirse (Map<String, dynamic>) ──────────────
   static final List<Map<String, dynamic>> features = [
     {
       'title': 'Disfruta en tu TV',
@@ -270,7 +259,6 @@ class AppData {
     },
   ];
 
-  // ── FAQ ──────────────────────────────────────────────────────
   static final List<FaqItem> faqs = [
     FaqItem(
       question: '¿Qué es esta plataforma?',
@@ -304,7 +292,6 @@ class AppData {
     ),
   ];
 
-  // ── Footer links (Mapa de categorías) ───────────────────────
   static final Map<String, List<String>> footerLinks = {
     'Soporte': [
       'Preguntas frecuentes',

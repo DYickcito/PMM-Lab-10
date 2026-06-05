@@ -4,10 +4,6 @@ import '../theme/app_theme.dart';
 import '../widgets/common_widgets.dart';
 import 'detail_screen.dart';
 
-// ─────────────────────────────────────────────────────────────
-//  PANTALLA PRINCIPAL — HomeScreen
-//  Ruta: /  (raíz)
-// ─────────────────────────────────────────────────────────────
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -70,13 +66,10 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
 
-          // ── Hero Banner ────────────────────────────────────
           SliverToBoxAdapter(child: _HeroBanner()),
 
-          // ── Tendencias ─────────────────────────────────────
           SliverToBoxAdapter(child: _TrendingSection()),
 
-          // ── Categorías (ListView por cada una) ────────────
           SliverList(
             delegate: SliverChildBuilderDelegate((context, index) {
               final category = AppData.categories[index];
@@ -84,13 +77,10 @@ class HomeScreen extends StatelessWidget {
             }, childCount: AppData.categories.length),
           ),
 
-          // ── Más motivos para unirse ────────────────────────
           SliverToBoxAdapter(child: _FeaturesSection()),
 
-          // ── Preguntas frecuentes ───────────────────────────
           SliverToBoxAdapter(child: _FAQSection()),
 
-          // ── CTA email final ────────────────────────────────
           const SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 24),
@@ -98,7 +88,6 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          // ── Footer ─────────────────────────────────────────
           SliverToBoxAdapter(child: _Footer()),
         ],
       ),
@@ -106,9 +95,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  APP BAR — gradiente superior
-// ═══════════════════════════════════════════════════════════════
 class _GradientAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -124,19 +110,12 @@ class _GradientAppBar extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  LOGO
-// ═══════════════════════════════════════════════════════════════
 class _Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        // Opción A: imagen local del logo
-        // Image.asset('assets/images/logo.png', height: 28)
-
-        // Opción B: texto estilizado (por si no tienes imagen de logo)
         Text(
           'STREAMIX',
           style: Theme.of(context).textTheme.displaySmall!.copyWith(
@@ -174,7 +153,6 @@ class _HeroBanner extends StatelessWidget {
               ),
             ),
           ),
-          // ── Gradiente inferior ───────────────────────────
           const DecoratedBox(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -185,7 +163,6 @@ class _HeroBanner extends StatelessWidget {
               ),
             ),
           ),
-          // ── Contenido textual centrado ───────────────────
           Positioned(
             bottom: 0,
             left: 0,
@@ -224,9 +201,6 @@ class _HeroBanner extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  SECCIÓN TENDENCIAS
-// ═══════════════════════════════════════════════════════════════
 class _TrendingSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -259,9 +233,6 @@ class _TrendingSection extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  SECCIÓN CATEGORÍA (ListView horizontal con MovieCards)
-// ═══════════════════════════════════════════════════════════════
 class _CategorySection extends StatelessWidget {
   final ContentCategory category;
   const _CategorySection({required this.category});
@@ -296,9 +267,6 @@ class _CategorySection extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  SECCIÓN FEATURES — "Más motivos para unirte"
-// ═══════════════════════════════════════════════════════════════
 class _FeaturesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -324,9 +292,6 @@ class _FeaturesSection extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  SECCIÓN FAQ — Preguntas frecuentes
-// ═══════════════════════════════════════════════════════════════
 class _FAQSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -351,9 +316,6 @@ class _FAQSection extends StatelessWidget {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  FOOTER
-// ═══════════════════════════════════════════════════════════════
 class _Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

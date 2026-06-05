@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/app_data.dart';
 import '../theme/app_theme.dart';
 
-// ─────────────────────────────────────────────────────────────
-//  PANTALLA DE DETALLE  (destino de rutas nombradas)
-//  Ruta: /detail  — recibe un Movie como argumento
-// ─────────────────────────────────────────────────────────────
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
 
@@ -61,7 +57,6 @@ class DetailScreen extends StatelessWidget {
             ),
           ),
 
-          // ── Contenido del detalle ────────────────────────
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(20),

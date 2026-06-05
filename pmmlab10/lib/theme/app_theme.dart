@@ -36,7 +36,6 @@ class AppTheme {
         iconTheme: IconThemeData(color: textPrimary),
       ),
       textTheme: const TextTheme(
-        // FUENTE 1: Bebas Neue — títulos grandes / display
         displayLarge: TextStyle(
           fontFamily: 'BebasNeue',
           fontSize: 48,
@@ -59,7 +58,6 @@ class AppTheme {
           letterSpacing: 1.5,
         ),
 
-        // FUENTE 2: Raleway — subtítulos / secciones
         headlineLarge: TextStyle(
           fontFamily: 'Raleway',
           fontSize: 22,
@@ -80,7 +78,6 @@ class AppTheme {
           color: textPrimary,
         ),
 
-        // FUENTE 3: Source Sans 3 — cuerpo / descripción / UI
         bodyLarge: TextStyle(
           fontFamily: 'SourceSans3',
           fontSize: 16,

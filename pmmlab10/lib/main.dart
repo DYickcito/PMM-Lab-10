@@ -24,9 +24,6 @@ void main() {
   runApp(const StreamingApp());
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  RAÍZ DE LA APLICACIÓN
-// ═══════════════════════════════════════════════════════════════
 class StreamingApp extends StatelessWidget {
   const StreamingApp({super.key});
 
@@ -36,12 +33,8 @@ class StreamingApp extends StatelessWidget {
       title: 'Streamix',
       debugShowCheckedModeBanner: false,
 
-      // ── Tema global ────────────────────────────────────────
       theme: AppTheme.darkTheme,
 
-      // ── Rutas nombradas ─────────────────────────────────────
-      // Se definen aquí para que cualquier pantalla pueda
-      // navegar con Navigator.pushNamed(context, '/detail', arguments: movie)
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (_) => const HomeScreen(),
