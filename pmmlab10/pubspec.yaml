@@ -49,6 +49,8 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+
+
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -56,6 +58,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  assets:
+    - assets/images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -87,3 +92,28 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+  fonts:
+    # FUENTE 1 — Bebas Neue (títulos / display)
+    - family: BebasNeue
+      fonts:
+        - asset: assets/fonts/BebasNeue-Regular.ttf
+ 
+    # FUENTE 2 — Raleway (subtítulos / secciones)
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Raleway-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Raleway-Bold.ttf
+          weight: 700
+ 
+    # FUENTE 3 — Source Sans 3 (cuerpo / UI)
+    - family: SourceSans3
+      fonts:
+        - asset: assets/fonts/SourceSans3-Light.ttf
+          weight: 300
+        - asset: assets/fonts/SourceSans3-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/SourceSans3-SemiBold.ttf
+          weight: 600
